@@ -1,0 +1,496 @@
+
+.how-it-works-section {
+  background: #f0f0f2;
+  min-height: 100vh;
+  color: #1a1f36;
+}
+
+/* Section Title */
+.section-title {
+  color: #1a1f36;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.section-title span {
+  color: #f48932;
+}
+
+.section-subtitle {
+  color: #6f7b92;
+  text-align: center;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Phase Navigation */
+.phase-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.phase-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  background: #F8FAFF;
+  border: 1px solid #E6EAF2;
+  border-radius: 50px;
+  color: #1a1f36;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.phase-btn.active {
+  background: rgba(244, 137, 50, 0.08);
+  border-color: #f48932;
+  color: #f48932;
+}
+
+.phase-icon {
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  color: #f48932;
+}
+
+.phase-name {
+  font-size: 0.9rem;
+}
+
+/* Journey Panel */
+.journey-panel {
+  background: #F8FAFF;
+  border: 1px solid #E6EAF2;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  height: 100%;
+}
+
+.journey-title {
+  color: #f48932;
+  margin-bottom: 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+/* Step Items */
+.step-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  background: #FFFFFF;
+  border: 1px solid #E6EAF2;
+}
+
+.step-item.active {
+  border-color: #f48932;
+  background: rgba(244, 137, 50, 0.02);
+}
+
+.step-item:hover {
+  border-color: #f48932;
+  box-shadow: 0 5px 15px rgba(244, 137, 50, 0.08);
+}
+
+.step-icon-wrapper {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 1.2rem;
+  background: rgba(244, 137, 50, 0.08);
+  color: #f48932;
+}
+
+.step-title {
+  color: #1a1f36;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  font-size: 1rem;
+}
+
+.step-preview {
+  color: #6f7b92;
+  font-size: 0.8rem;
+  margin-bottom: 0;
+}
+
+.step-active-indicator {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #f48932;
+}
+
+/* Quick Stats */
+.quick-stats {
+  padding: 1rem;
+  background: #FFFFFF;
+  border-radius: 0.5rem;
+  border: 1px solid #E6EAF2;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.stat-item:last-child {
+  margin-bottom: 0;
+}
+
+.stat-icon-small {
+  font-size: 0.9rem;
+  color: #f48932;
+}
+
+.stat-label {
+  color: #6f7b92;
+  font-size: 0.9rem;
+}
+
+.stat-value {
+  color: #1a1f36;
+  font-weight: 600;
+  margin-left: auto;
+}
+
+/* Active Step Panel */
+.active-step-panel {
+  background: #F8FAFF;
+  border: 1px solid #E6EAF2;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  height: 100%;
+}
+
+.active-step-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.active-step-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: rgba(244, 137, 50, 0.08);
+  color: #f48932;
+}
+
+.step-badge-wrapper {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.step-badge {
+  background: #f48932;
+  color: #FFFFFF;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.phase-badge {
+  background: rgba(244, 137, 50, 0.08);
+  color: #f48932;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.active-step-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  color: #f48932;
+}
+
+.active-step-description {
+  color: #6f7b92;
+  margin-bottom: 0;
+  font-size: 1rem;
+}
+
+/* Info Tags */
+.info-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.info-tag {
+  background: #FFFFFF;
+  padding: 0.4rem 1rem;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  color: #1a1f36;
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #E6EAF2;
+}
+
+.info-tag i {
+  color: #f48932;
+}
+
+/* Detail Cards */
+.detail-card {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: #FFFFFF;
+  transition: all 0.3s ease;
+  border: 1px solid #E6EAF2;
+}
+
+.detail-card:hover {
+  border-color: #f48932;
+  box-shadow: 0 5px 15px rgba(244, 137, 50, 0.08);
+}
+
+.detail-icon {
+  font-size: 1rem;
+  flex-shrink: 0;
+  color: #f48932;
+}
+
+.detail-text {
+  color: #1a1f36;
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
+
+/* Progress Bar */
+.progress-container {
+  background: #FFFFFF;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #E6EAF2;
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.progress-label {
+  color: #f48932;
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.progress-count {
+  color: #6f7b92;
+  font-size: 0.9rem;
+}
+
+.progress {
+  height: 8px;
+  background: #E6EAF2;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #f48932, #f6b56f);
+}
+
+/* Quick Action Cards */
+.quick-action-card {
+  background: #FFFFFF;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid #E6EAF2;
+  transition: all 0.3s ease;
+}
+
+.quick-action-card:hover {
+  border-color: #f48932;
+  box-shadow: 0 5px 15px rgba(244, 137, 50, 0.08);
+  transform: translateY(-2px);
+}
+
+.action-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  display: block;
+  color: #f48932;
+}
+
+.action-title {
+  color: #1a1f36;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  font-size: 0.9rem;
+}
+
+.action-desc {
+  color: #6f7b92;
+  font-size: 0.8rem;
+  margin-bottom: 0;
+}
+
+/* Pro Tips */
+.pro-tips {
+  background: #FFFFFF;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  border: 1px solid #E6EAF2;
+}
+
+.pro-tips-title {
+  color: #f48932;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.tip-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.tip-item:last-child {
+  margin-bottom: 0;
+}
+
+.tip-icon {
+  font-size: 0.8rem;
+  color: #f48932;
+}
+
+.tip-text {
+  color: #6f7b92;
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
+
+/* Next Step Hint */
+.next-step-hint {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background: rgba(244, 137, 50, 0.03);
+  border-radius: 0.5rem;
+  text-align: center;
+  color: #6f7b92;
+  font-size: 0.9rem;
+  border: 1px dashed #f48932;
+}
+
+.next-step-hint strong {
+  color: #f48932;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .phase-navigation {
+    gap: 0.5rem;
+  }
+  
+  .phase-btn {
+    padding: 0.5rem 1rem;
+  }
+  
+  .phase-name {
+    display: none;
+  }
+  
+  .active-step-header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  .active-step-icon {
+    margin: 0 auto;
+  }
+  
+  .active-step-title {
+    font-size: 1.5rem;
+  }
+  
+  .step-badge-wrapper {
+    justify-content: center;
+  }
+  
+  .info-tags {
+    justify-content: center;
+  }
+  
+  .journey-panel,
+  .active-step-panel {
+    padding: 1rem;
+  }
+  
+  .step-icon-wrapper {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-title {
+    font-size: 1.75rem;
+  }
+  
+  .detail-card {
+    margin-bottom: 0.5rem;
+  }
+  
+  .quick-action-card {
+    padding: 0.75rem;
+  }
+}
