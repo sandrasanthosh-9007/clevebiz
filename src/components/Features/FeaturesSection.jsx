@@ -14,21 +14,21 @@ const FeaturesSection = () => {
       title: "Project Management",
       description: "Create projects, assign tasks, set milestones, and track progress with Gantt charts.",
       highlight: "Complete project lifecycle management",
-      color: "#f48932"
+      color: "var(--primary-color)"
     },
     {
       icon: "people",
       title: "HR Management",
       description: "Manage employee records, attendance, leave requests, and automated payroll processing.",
       highlight: "Streamlined workforce management",
-      color: "#f48932"
+      color: "var(--primary-color)"
     },
     {
       icon: "graph-up",
       title: "CRM & Lead Management",
       description: "Capture leads, manage client relationships, track communications, and convert opportunities.",
       highlight: "Grow your business effectively",
-      color: "#f48932"
+      color: "var(--primary-color)"
     }
   ];
 

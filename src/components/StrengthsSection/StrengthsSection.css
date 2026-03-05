@@ -5,21 +5,21 @@
 
 /* Custom color classes */
 .text-primary-custom {
-  color: #f48932 !important;
+  color: var(--primary-color) ;
 }
 
 .text-secondary-custom {
-  color: #6f7b92 !important;
+  color: #6f7b92 ;
 }
 
 .bg-primary-custom {
-  background-color: #f48932 !important;
+  background-color: var(--primary-color) t;
 }
 
 /* Badge Styles */
 .badge-custom {
-  background-color: rgba(244, 137, 50, 0.08) !important;
-  color: #f48932 !important;
+  background-color: rgba(244, 137, 50, 0.08);
+  color: var(--primary-color) !important;
   border: 1px solid rgba(244, 137, 50, 0.1);
   font-weight: 500;
   font-size: 0.9rem;
@@ -29,7 +29,7 @@
 .strength-card {
   background: #F8FAFF;
   border: 1px solid #E6EAF2;
-  border-radius: 20px !important;
+  border-radius: 20px;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -37,8 +37,8 @@
 }
 
 .strength-card:hover {
-  border-color: #f48932 !important;
-  box-shadow: 0 20px 30px rgba(244, 137, 50, 0.08) !important;
+  border-color: var(--primary-color) ;
+  box-shadow: 0 20px 30px rgba(244, 137, 50, 0.08) ;
 }
 
 /* Icon Wrapper */
@@ -54,12 +54,12 @@
 }
 
 .strength-card:hover .strength-icon-wrapper {
-  background: #f48932;
+  background: var(--primary-color);
 }
 
 .strength-icon {
   font-size: 2rem;
-  color: #f48932;
+  color: var(--primary-color);
   transition: all 0.3s ease;
 }
 

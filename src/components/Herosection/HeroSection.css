@@ -21,14 +21,14 @@
 
 /* Ensure content takes full height */
 .hero-section .h-100 {
-  height: 100% !important;
+  height: 100%;
   min-height: 100vh;
 }
 
 /* ===== BADGE STYLES ===== */
 .badge-custom {
-  background-color: rgba(232, 145, 58, 0.08) !important;
-  color: #f48932 !important;
+  background-color: rgba(232, 145, 58, 0.08);
+  color: var(--primary-color);
   font-weight: 500;
   display: inline-flex;
   align-items: center;
@@ -56,18 +56,18 @@
 }
 
 .hero-subtitle {
-  color: #6f7b92 !important;
+  color: #6f7b92;
 }
 
 .hero-subtitle.fs-5 {
-  font-size: 1.1rem !important;
+  font-size: 1.1rem;
 }
 
 .hero-subtitle.fs-lg-4 {
-  font-size: 1.25rem !important;
+  font-size: 1.25rem;
 }
 
-/* ===== STATS STYLES ===== */
+
 .stat-item {
   background-color: #ffffff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
@@ -94,24 +94,24 @@
   color: #f35423;
 }
 
-/* ===== BUTTON STYLES ===== */
+
 .btn-primary-custom {
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
-  background-color: #ed9b52 !important;
-  border-radius: 10px !important;
-  color: #ffffff !important;
+  background-color: #ed9b52;
+  border-radius: 10px;
+  color: #ffffff;
   white-space: nowrap;
 }
 
 .btn-primary-custom:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(42, 78, 250, 0.25) !important;
-  background-color: #ec9647 !important;
+  box-shadow: 0 10px 25px rgba(42, 78, 250, 0.25);
+  background-color: #ec9647;
 }
 
-/* ===== HERO IMAGE STYLES ===== */
+
 .hero-image-wrapper {
   position: relative;
   padding: 2rem;
@@ -124,7 +124,7 @@
   height: auto;
 }
 
-/* ===== FLOATING CARDS ===== */
+
 .floating-card {
   background-color: #ffffff;
   box-shadow: 0 10px 25px rgba(42, 78, 250, 0.08);
@@ -157,19 +157,10 @@
   color: #ecb322;
 }
 
-.card-1 {
-  animation-delay: 0s;
-}
+.card-1 { animation-delay: 0s; }
+.card-2 { animation-delay: 1s; }
+.card-3 { animation-delay: 2s; }
 
-.card-2 {
-  animation-delay: 1s;
-}
-
-.card-3 {
-  animation-delay: 2s;
-}
-
-/* ===== BACKGROUND SHAPES ===== */
 .hero-background {
   position: absolute;
   top: 0;
@@ -205,38 +196,22 @@
   opacity: 0.02;
 }
 
-/* ===== ICON ANIMATIONS ===== */
-.icon-rocket {
-  display: inline-block;
-}
 
-.icon-arrow {
-  display: inline-block;
-}
-
+.icon-rocket,
+.icon-arrow,
 .icon-play {
   display: inline-block;
 }
 
-/* ===== ANIMATIONS ===== */
+
 @keyframes float {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
 }
 
 @keyframes slide {
-  0%,
-  100% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(5px);
-  }
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(5px); }
 }
 
 /* ===== BOOTSTRAP OVERRIDES ===== */
@@ -248,7 +223,7 @@
   --bs-gutter-y: 3rem;
 }
 
-/* ===== GLOBAL STYLES ===== */
+
 html {
   scroll-behavior: smooth;
 }

@@ -1,27 +1,27 @@
 export const phases = [
   {
     name: "Setup Phase",
-    color: "#f48932",
+    color: "var(--primary-color)",
     icon: "gear"
   },
   {
     name: "Project Phase",
-    color: "#f48932",
+    color: "var(--primary-color)",
     icon: "kanban"
   },
   {
     name: "HR Phase",
-    color: "#f48932",
+    color: "var(--primary-color)",
     icon: "people"
   },
   {
     name: "Finance Phase",
-    color: "#f48932",
+    color: "var(--primary-color)",
     icon: "cash-stack"
   },
   {
     name: "Growth Phase",
-    color: "#f48932",
+    color: "var(--primary-color)",
     icon: "graph-up"
   }
 ];
@@ -41,7 +41,7 @@ export const steps = [
     ],
     timeToComplete: "10-15 min",
     role: "Administrator",
-    color: "#f48932"
+    color: "var(--primary-color)"
   },
   {
     phase: 0,
@@ -56,7 +56,7 @@ export const steps = [
     ],
     timeToComplete: "5-10 min",
     role: "Administrator, HR",
-    color: "#f48932"
+    color: "var(--primary-color)"
   },
   {
     phase: 0,
@@ -71,7 +71,7 @@ export const steps = [
     ],
     timeToComplete: "3-5 min",
     role: "Sales Team",
-    color: "#f48932"
+    color: "var(--primary-color)"
   },
   // Project Phase (3-5)
   {
@@ -87,7 +87,7 @@ export const steps = [
     ],
     timeToComplete: "15-20 min",
     role: "Project Manager",
-    color: "#f48932"
+    color: "var(--primary-color)"
   },
   {
     phase: 1,
@@ -102,7 +102,7 @@ export const steps = [
     ],
     timeToComplete: "Ongoing",
     role: "Project Manager, Team Lead",
-    color: "#f48932"
+    color: "var(--primary-color)"
   },
   {
     phase: 1,
@@ -117,7 +117,7 @@ export const steps = [
     ],
     timeToComplete: "10 min",
     role: "Project Manager",
-    color: "#f48932"
+    color: "var(--primary-color)"
   },
   // HR Phase (6-8)
   {
@@ -133,7 +133,7 @@ export const steps = [
     ],
     timeToComplete: "Daily (30 sec)",
     role: "All Employees",
-    color: "#f48932"
+    color: "var(--primary-color)"
   },
   {
     phase: 2,
@@ -148,7 +148,7 @@ export const steps = [
     ],
     timeToComplete: "2-3 min",
     role: "All Employees, HR",
-    color: "#f48932"
+    color: "var(--primary-color)"
   },
   {
     phase: 2,
@@ -163,7 +163,7 @@ export const steps = [
     ],
     timeToComplete: "30 min/month",
     role: "HR, Finance",
-    color: "#f48932"
+    color: "var(--primary-color)"
   },
   // Finance Phase (9-11)
   {
@@ -179,7 +179,7 @@ export const steps = [
     ],
     timeToComplete: "2 min/expense",
     role: "Team Members, Finance",
-    color: "#f48932"
+    color: "var(--primary-color)"
   },
   {
     phase: 3,
@@ -194,7 +194,7 @@ export const steps = [
     ],
     timeToComplete: "5 min/invoice",
     role: "Finance, PM",
-    color: "#f48932"
+    color: "var(--primary-color)"
   },
   {
     phase: 3,
@@ -209,7 +209,7 @@ export const steps = [
     ],
     timeToComplete: "Ongoing",
     role: "Project Manager, Clients",
-    color: "#f48932"
+    color: "var(--primary-color)"
   },
   // Growth Phase (12-14)
   {
@@ -225,7 +225,7 @@ export const steps = [
     ],
     timeToComplete: "5 min/lead",
     role: "Sales Team",
-    color: "#f48932"
+    color: "var(--primary-color)"
   },
   {
     phase: 4,
@@ -240,7 +240,7 @@ export const steps = [
     ],
     timeToComplete: "Ongoing",
     role: "Support Team",
-    color: "#f48932"
+    color: "var(--primary-color)"
   },
   {
     phase: 4,
@@ -255,6 +255,6 @@ export const steps = [
     ],
     timeToComplete: "Real-time",
     role: "Administrators, Managers",
-    color: "#f48932"
+    color: "var(--primary-color)"
   }
 ];

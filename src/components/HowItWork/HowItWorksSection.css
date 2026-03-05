@@ -15,7 +15,7 @@
 }
 
 .section-title span {
-  color: #f48932;
+  color: var(--primary-color);
 }
 
 .section-subtitle {
@@ -51,15 +51,15 @@
 
 .phase-btn.active {
   background: rgba(244, 137, 50, 0.08);
-  border-color: #f48932;
-  color: #f48932;
+  border-color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 .phase-icon {
   font-size: 1.1rem;
   display: flex;
   align-items: center;
-  color: #f48932;
+  color: var(--primary-color);
 }
 
 .phase-name {
@@ -76,7 +76,7 @@
 }
 
 .journey-title {
-  color: #f48932;
+  color: var(--primary-color);
   margin-bottom: 1.5rem;
   font-size: 1.25rem;
   font-weight: 600;
@@ -101,12 +101,12 @@
 }
 
 .step-item.active {
-  border-color: #f48932;
+  border-color: var(--primary-color);
   background: rgba(244, 137, 50, 0.02);
 }
 
 .step-item:hover {
-  border-color: #f48932;
+  border-color: var(--primary-color);
   box-shadow: 0 5px 15px rgba(244, 137, 50, 0.08);
 }
 
@@ -120,7 +120,7 @@
   flex-shrink: 0;
   font-size: 1.2rem;
   background: rgba(244, 137, 50, 0.08);
-  color: #f48932;
+  color: var(--primary-color);
 }
 
 .step-title {
@@ -142,7 +142,7 @@
   top: 0;
   bottom: 0;
   width: 4px;
-  background: #f48932;
+  background: var(--primary-color);
 }
 
 /* Quick Stats */
@@ -166,7 +166,7 @@
 
 .stat-icon-small {
   font-size: 0.9rem;
-  color: #f48932;
+  color: var(--primary-color);
 }
 
 .stat-label {
@@ -205,7 +205,7 @@
   justify-content: center;
   flex-shrink: 0;
   background: rgba(244, 137, 50, 0.08);
-  color: #f48932;
+  color: var(--primary-color);
 }
 
 .step-badge-wrapper {
@@ -215,7 +215,7 @@
 }
 
 .step-badge {
-  background: #f48932;
+  background: var(--primary-color);
   color: #FFFFFF;
   padding: 0.25rem 0.75rem;
   border-radius: 20px;
@@ -225,7 +225,7 @@
 
 .phase-badge {
   background: rgba(244, 137, 50, 0.08);
-  color: #f48932;
+  color: var(--primary-color);
   padding: 0.25rem 0.75rem;
   border-radius: 20px;
   font-size: 0.75rem;
@@ -236,7 +236,7 @@
   font-size: 1.75rem;
   font-weight: 700;
   margin-bottom: 0.25rem;
-  color: #f48932;
+  color: var(--primary-color);
 }
 
 .active-step-description {
@@ -264,7 +264,7 @@
 }
 
 .info-tag i {
-  color: #f48932;
+  color: var(--primary-color);
 }
 
 /* Detail Cards */
@@ -280,14 +280,14 @@
 }
 
 .detail-card:hover {
-  border-color: #f48932;
+  border-color: var(--primary-color);
   box-shadow: 0 5px 15px rgba(244, 137, 50, 0.08);
 }
 
 .detail-icon {
   font-size: 1rem;
   flex-shrink: 0;
-  color: #f48932;
+  color: var(--primary-color);
 }
 
 .detail-text {
@@ -312,7 +312,7 @@
 }
 
 .progress-label {
-  color: #f48932;
+  color: var(--primary-color);
   font-size: 0.9rem;
   font-weight: 600;
   display: flex;
@@ -334,7 +334,7 @@
 .progress-bar {
   height: 100%;
   border-radius: 10px;
-  background: linear-gradient(90deg, #f48932, #f6b56f);
+  background: linear-gradient(90deg, var(--primary-color), #f6b56f);
 }
 
 /* Quick Action Cards */
@@ -349,7 +349,7 @@
 }
 
 .quick-action-card:hover {
-  border-color: #f48932;
+  border-color: var(--primary-color);
   box-shadow: 0 5px 15px rgba(244, 137, 50, 0.08);
   transform: translateY(-2px);
 }
@@ -358,7 +358,7 @@
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
   display: block;
-  color: #f48932;
+  color: var(--primary-color);
 }
 
 .action-title {
@@ -384,7 +384,7 @@
 }
 
 .pro-tips-title {
-  color: #f48932;
+  color: var(--primary-color);
   font-weight: 600;
   margin-bottom: 1rem;
   font-size: 1rem;
@@ -405,7 +405,7 @@
 
 .tip-icon {
   font-size: 0.8rem;
-  color: #f48932;
+  color: var(--primary-color);
 }
 
 .tip-text {
@@ -423,11 +423,11 @@
   text-align: center;
   color: #6f7b92;
   font-size: 0.9rem;
-  border: 1px dashed #f48932;
+  border: 1px dashed var(--primary-color);
 }
 
 .next-step-hint strong {
-  color: #f48932;
+  color: var(--primary-color);
 }
 
 /* Responsive Design */
