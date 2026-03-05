@@ -1,4 +1,3 @@
-
 import { Row, Col } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 
@@ -9,7 +8,8 @@ const PhaseNavigation = ({ phases, activePhase, onPhaseChange }) => {
         <div className="phase-navigation">
           {phases.map((phase, index) => (
             <motion.button
-              key={index}
+              key={phase.name} // Use stable identifier instead of index
+              type="button"    // Prevent unintended form submission
               className={`phase-btn ${activePhase === index ? 'active' : ''}`}
               onClick={() => onPhaseChange(index)}
               whileHover={{ y: -2 }}

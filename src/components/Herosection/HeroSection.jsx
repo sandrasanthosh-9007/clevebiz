@@ -1,21 +1,18 @@
-
-import { Container, Row, Col, Button } from 'react-bootstrap';
-import { motion } from 'framer-motion';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap-icons/font/bootstrap-icons.css';
-import './HeroSection.css';
+import { Container, Row, Col, Button } from "react-bootstrap";
+import { motion } from "framer-motion";
+import dashboardImg from "../../assets/img.png";
+import "./HeroSection.css";
 
 const HeroSection = () => {
- 
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
         staggerChildren: 0.2,
-        delayChildren: 0.3
-      }
-    }
+        delayChildren: 0.3,
+      },
+    },
   };
 
   const itemVariants = {
@@ -26,9 +23,9 @@ const HeroSection = () => {
       transition: {
         type: "spring",
         stiffness: 100,
-        damping: 10
-      }
-    }
+        damping: 10,
+      },
+    },
   };
 
   const floatingCardVariants = {
@@ -42,61 +39,64 @@ const HeroSection = () => {
           type: "spring",
           stiffness: 200,
           damping: 20,
-          delay: custom * 0.3
+          delay: custom * 0.3,
         },
         y: {
           duration: 3,
           repeat: Infinity,
           repeatType: "reverse",
           ease: "easeInOut",
-          delay: custom * 0.2
-        }
-      }
-    })
+          delay: custom * 0.2,
+        },
+      },
+    }),
   };
 
   // Stats data
   const statsData = [
     { value: "10K+", label: "Active Users", icon: "people" },
     { value: "98%", label: "Satisfaction Rate", icon: "star" },
-    { value: "24/7", label: "Support", icon: "headset" }
+    { value: "24/7", label: "Support", icon: "headset" },
   ];
 
-  // Floating cards data
+  // Floating cards data (added stable IDs)
   const floatingCardsData = [
-    { 
-      icon: "kanban", 
-      title: "Project Management", 
-      subtitle: "15 active projects", 
-      delay: 0, 
+    {
+      id: "project",
+      icon: "kanban",
+      title: "Project Management",
+      subtitle: "15 active projects",
+      delay: 0,
       position: { top: "10%", left: "-10%" },
-      className: "card-1 d-none d-xl-block"
+      className: "card-1 d-none d-xl-block",
     },
-    { 
-      icon: "people", 
-      title: "Team Collaboration", 
-      subtitle: "24 team members", 
-      delay: 1, 
+    {
+      id: "team",
+      icon: "people",
+      title: "Team Collaboration",
+      subtitle: "24 team members",
+      delay: 1,
       position: { bottom: "15%", right: "-5%" },
-      className: "card-2 d-none d-xl-block"
+      className: "card-2 d-none d-xl-block",
     },
-    { 
-      icon: "currency-dollar", 
-      title: "Financial Tracking", 
-      subtitle: "Budget: $45.2K", 
-      delay: 2, 
+    {
+      id: "finance",
+      icon: "currency-dollar",
+      title: "Financial Tracking",
+      subtitle: "Budget: $45.2K",
+      delay: 2,
       position: { top: "40%", right: "-15%" },
-      className: "card-3 d-none d-xl-block"
-    }
+      className: "card-3 d-none d-xl-block",
+    },
   ];
 
   return (
-    <motion.section 
+    <motion.section
       className="hero-section full-screen"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
-      id='home'
+      id="home"
     >
       <Container className="h-100">
         <motion.div
@@ -107,64 +107,67 @@ const HeroSection = () => {
         >
           <Row className="align-items-center w-100 g-5">
             {/* Left Column - Content */}
-            <Col xs={12} lg={6} className="hero-content text-center text-lg-start">
-            
-              <motion.div 
+            <Col
+              xs={12}
+              lg={6}
+              className="hero-content text-center text-lg-start"
+            >
+              <motion.div
                 className="hero-badge px-3 mb-4 d-flex justify-content-center justify-content-lg-start"
                 variants={itemVariants}
               >
-                <motion.span 
+                <motion.span
                   className="badge badge-custom px-3 py-2 rounded-pill"
-                  whileHover={{ 
+                  whileHover={{
                     boxShadow: "0 5px 15px rgba(249, 156, 127, 0.3)",
-                    transition: { duration: 0.2 }
+                    transition: { duration: 0.2 },
                   }}
                 >
-                  <motion.i 
+                  <motion.i
                     className="bi bi-rocket me-2 icon-rocket"
-                    animate={{ 
+                    animate={{
                       rotate: [0, 10, -10, 0],
-                      scale: [1, 1.1, 1]
+                      scale: [1, 1.1, 1],
                     }}
-                    transition={{ 
+                    transition={{
                       duration: 2,
                       repeat: Infinity,
-                      repeatType: "reverse"
+                      repeatType: "reverse",
                     }}
                   />
                   All-in-One Business Management
                 </motion.span>
               </motion.div>
-              
+
               {/* Main Heading */}
-              <motion.h1 
+              <motion.h1
                 className="hero-title display-1 display-lg-3 fw-bold mb-4"
                 variants={itemVariants}
               >
-                Streamline Your Business with{' '}
-                <motion.span 
+                Streamline Your Business with{" "}
+                <motion.span
                   className="d-inline-block brand-highlight"
-                  whileHover={{ 
+                  whileHover={{
                     scale: 1.05,
                     rotate: [0, -2, 2, 0],
-                    transition: { duration: 0.3 }
+                    transition: { duration: 0.3 },
                   }}
                 >
                   CleveBiz
                 </motion.span>
               </motion.h1>
-              
+
               {/* Subtitle */}
-              <motion.p 
+              <motion.p
                 className="lead mb-5 hero-subtitle fs-5 fs-lg-4"
                 variants={itemVariants}
               >
-                Integrated CRM, HR, and Project Management system designed to 
+                Integrated CRM, HR, and Project Management system designed to
                 eliminate operational silos and enhance team collaboration.
               </motion.p>
-              
+
               {/* CTA Buttons */}
-              <motion.div 
+              <motion.div
                 className="hero-cta d-flex flex-column flex-sm-row gap-3 mb-5 justify-content-center justify-content-lg-start"
                 variants={itemVariants}
               >
@@ -173,8 +176,8 @@ const HeroSection = () => {
                   whileTap={{ scale: 0.95 }}
                   className="w-100 w-sm-auto"
                 >
-                  <Button 
-                    size="lg" 
+                  <Button
+                    size="lg"
                     className="px-4 py-3 fw-semibold rounded-3 border-0 btn-primary-custom w-100 w-sm-auto"
                     href="#get-started"
                   >
@@ -184,57 +187,59 @@ const HeroSection = () => {
                       transition={{ delay: 0.5 }}
                     >
                       Start Free Trial
-                      <motion.i 
+                      <motion.i
                         className="bi bi-arrow-right ms-2 icon-arrow"
                         animate={{ x: [0, 5, 0] }}
-                        transition={{ 
+                        transition={{
                           duration: 1.5,
                           repeat: Infinity,
-                          repeatType: "reverse"
+                          repeatType: "reverse",
                         }}
                       />
                     </motion.span>
                   </Button>
                 </motion.div>
               </motion.div>
-              
+
               {/* Stats */}
-              <motion.div 
+              <motion.div
                 className="hero-stats d-flex flex-column flex-sm-row gap-3 gap-lg-4 justify-content-center justify-content-lg-start"
                 variants={itemVariants}
               >
                 {statsData.map((stat, index) => (
-                  <motion.div 
-                    key={index}
+                  <motion.div
+                    key={stat.label}
                     className="stat-item p-3 rounded-3 w-100 w-sm-auto"
-                    whileHover={{ 
+                    whileHover={{
                       y: -5,
                       boxShadow: "0 10px 20px rgba(42, 78, 250, 0.08)",
                       borderColor: "#ef6d48",
-                      transition: { duration: 0.2 }
+                      transition: { duration: 0.2 },
                     }}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.8 + index * 0.1 }}
                   >
-                    <motion.div 
+                    <motion.div
                       className="d-flex align-items-center gap-2 justify-content-center justify-content-sm-start"
                       whileHover={{ scale: 1.02 }}
                     >
-                      <motion.i 
+                      <motion.i
                         className={`bi bi-${stat.icon} fs-4 stat-icon`}
-                        animate={{ 
+                        animate={{
                           rotate: [0, 5, -5, 0],
-                          scale: [1, 1.1, 1]
+                          scale: [1, 1.1, 1],
                         }}
-                        transition={{ 
+                        transition={{
                           duration: 2,
                           repeat: Infinity,
-                          delay: index * 0.3
+                          delay: index * 0.3,
                         }}
                       />
                       <div className="text-center text-sm-start">
-                        <h3 className="h2 fw-bold mb-0 stat-value">{stat.value}</h3>
+                        <h3 className="h2 fw-bold mb-0 stat-value">
+                          {stat.value}
+                        </h3>
                         <p className="mb-0 stat-label">{stat.label}</p>
                       </div>
                     </motion.div>
@@ -242,82 +247,84 @@ const HeroSection = () => {
                 ))}
               </motion.div>
             </Col>
-            
+
             {/* Right Column - Image with Floating Cards */}
             <Col xs={12} lg={6} className="hero-visual mt-5 mt-lg-0">
-              <motion.div 
+              <motion.div
                 className="hero-image-wrapper position-relative"
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ 
+                transition={{
                   type: "spring",
                   stiffness: 50,
                   damping: 20,
-                  delay: 0.5
+                  delay: 0.5,
                 }}
               >
                 {/* Main Image */}
-                <motion.img 
-                  src="../public/img.png" 
-                  alt="Clevebiz Dashboard Preview" 
+                <motion.img
+                  src={dashboardImg}
+                  alt="Clevebiz Dashboard Preview"
                   className="img-fluid rounded-4 hero-image w-100"
-                  whileHover={{ 
+                  whileHover={{
                     scale: 1.02,
                     boxShadow: "0 20px 40px rgba(230, 93, 19, 0.15)",
-                    transition: { duration: 0.3 }
+                    transition: { duration: 0.3 },
                   }}
                   animate={{
-                    y: [0, -10, 0]
+                    y: [0, -10, 0],
                   }}
                   transition={{
                     duration: 5,
                     repeat: Infinity,
                     repeatType: "reverse",
-                    ease: "easeInOut"
+                    ease: "easeInOut",
                   }}
                 />
-                
+
                 {/* Floating Feature Cards */}
-                {floatingCardsData.map((card, index) => (
+                {floatingCardsData.map((card) => (
                   <motion.div
-                    key={index}
+                    key={card.id}
                     className={`floating-card ${card.className} p-3 rounded-3`}
                     style={card.position}
                     variants={floatingCardVariants}
                     initial="initial"
                     animate="animate"
                     custom={card.delay}
-                    whileHover={{ 
+                    whileHover={{
                       scale: 1.1,
                       boxShadow: "0 15px 30px rgba(42, 78, 250, 0.12)",
                       borderColor: "#f35213",
-                      transition: { duration: 0.2 }
+                      transition: { duration: 0.2 },
                     }}
                   >
                     <motion.div className="d-flex align-items-center gap-2">
-                      <motion.div 
+                      <motion.div
                         className="p-2 rounded-3 icon-wrapper"
-                        animate={{ 
+                        animate={{
                           rotate: [0, 360],
-                          scale: [1, 1.1, 1]
+                          scale: [1, 1.1, 1],
                         }}
-                        transition={{ 
+                        transition={{
                           duration: 10,
                           repeat: Infinity,
-                          ease: "linear"
+                          ease: "linear",
                         }}
                       >
                         <i className={`bi bi-${card.icon} card-icon`}></i>
                       </motion.div>
                       <div>
-                        <h6 className="mb-0 fw-semibold card-title">{card.title}</h6>
-                        <motion.small 
+                        <h6 className="mb-0 fw-semibold card-title">
+                          {card.title}
+                        </h6>
+                        <motion.small
                           className="card-subtitle"
                           animate={{ opacity: [0.7, 1, 0.7] }}
-                          transition={{ 
+                          transition={{
                             duration: 2,
                             repeat: Infinity,
-                            delay: card.delay
+                            delay: card.delay,
                           }}
                         >
                           {card.subtitle}
@@ -331,9 +338,9 @@ const HeroSection = () => {
           </Row>
         </motion.div>
       </Container>
-      
+
       {/* Background Decoration */}
-      <motion.div 
+      <motion.div
         className="hero-background"
         animate={{
           rotate: [0, 360],
@@ -341,10 +348,10 @@ const HeroSection = () => {
         transition={{
           duration: 20,
           repeat: Infinity,
-          ease: "linear"
+          ease: "linear",
         }}
       >
-        <motion.div 
+        <motion.div
           className="shape shape-1"
           animate={{
             scale: [1, 1.2, 1],
@@ -352,10 +359,10 @@ const HeroSection = () => {
           transition={{
             duration: 8,
             repeat: Infinity,
-            repeatType: "reverse"
+            repeatType: "reverse",
           }}
         />
-        <motion.div 
+        <motion.div
           className="shape shape-2"
           animate={{
             scale: [1, 1.3, 1],
@@ -363,7 +370,7 @@ const HeroSection = () => {
           transition={{
             duration: 10,
             repeat: Infinity,
-            repeatType: "reverse"
+            repeatType: "reverse",
           }}
         />
       </motion.div>

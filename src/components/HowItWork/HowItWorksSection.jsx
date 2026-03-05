@@ -1,4 +1,4 @@
-import  { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -17,13 +17,14 @@ const HowItWorksSection = () => {
   const [activeStep, setActiveStep] = useState(0);
   const [activePhase, setActivePhase] = useState(0);
 
-  // Filter steps by active phase
-  const filteredSteps = steps.filter(step => step.phase === activePhase);
-  
-  // Handle phase change
+  // Memoized filtered steps
+  const filteredSteps = useMemo(() => {
+    return steps.filter(step => step.phase === activePhase);
+  }, [activePhase]);
+
   const handlePhaseChange = (phaseIndex) => {
     setActivePhase(phaseIndex);
-    setActiveStep(0); 
+    setActiveStep(0);
   };
 
   const handleStepClick = (index) => {
@@ -33,8 +34,9 @@ const HowItWorksSection = () => {
   const currentStep = filteredSteps[activeStep] || filteredSteps[0];
 
   return (
-    <section className="how-it-works-section py-5" id='how-it-works'>
+    <section className="how-it-works-section py-5" id="how-it-works">
       <Container fluid className="px-4 px-lg-5">
+
         {/* Section Title */}
         <Row className="mb-5">
           <Col xs={12}>
@@ -48,7 +50,7 @@ const HowItWorksSection = () => {
         </Row>
 
         {/* Phase Navigation */}
-        <PhaseNavigation 
+        <PhaseNavigation
           phases={phases}
           activePhase={activePhase}
           onPhaseChange={handlePhaseChange}
@@ -57,7 +59,7 @@ const HowItWorksSection = () => {
         <Row>
           {/* Left Column - Journey Steps */}
           <Col lg={4} className="mb-4 mb-lg-0">
-            <JourneyStepsPanel 
+            <JourneyStepsPanel
               phases={phases}
               activePhase={activePhase}
               filteredSteps={filteredSteps}
@@ -66,9 +68,9 @@ const HowItWorksSection = () => {
             />
           </Col>
 
-          {/* Right Column - Active Step Details */}
+          {/* Right Column - Step Details */}
           <Col lg={8}>
-            <StepDetailsPanel 
+            <StepDetailsPanel
               currentStep={currentStep}
               activeStep={activeStep}
               filteredSteps={filteredSteps}
@@ -78,6 +80,7 @@ const HowItWorksSection = () => {
             />
           </Col>
         </Row>
+
       </Container>
     </section>
   );

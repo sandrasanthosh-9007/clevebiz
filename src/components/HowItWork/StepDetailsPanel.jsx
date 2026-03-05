@@ -1,4 +1,3 @@
-
 import { Row, Col } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 
@@ -12,6 +11,13 @@ const StepDetailsPanel = ({
 }) => {
   if (!currentStep) return null;
 
+  // Compute step number once for readability
+  const stepNumber =
+    steps.findIndex(s => s.title === currentStep.title) + 1;
+
+  const progressPercentage =
+    ((activeStep + 1) / filteredSteps.length) * 100;
+
   return (
     <motion.div 
       className="active-step-panel"
@@ -24,25 +30,30 @@ const StepDetailsPanel = ({
         <div className="active-step-icon">
           <i className={`bi bi-${currentStep.icon} fs-1`}></i>
         </div>
+
         <div>
           <div className="step-badge-wrapper">
             <span className="step-badge">
-              Step {steps.findIndex(s => s.title === currentStep.title) + 1}
+              Step {stepNumber}
             </span>
+
             <span className="phase-badge">
               {phases[activePhase].name}
             </span>
           </div>
+
           <h3 className="active-step-title">
             {currentStep.title}
           </h3>
-          <p className="active-step-description">{currentStep.description}</p>
+
+          <p className="active-step-description">
+            {currentStep.description}
+          </p>
         </div>
       </div>
 
       {/* Quick Info Tags */}
       <div className="info-tags mb-4">
-        
         <div className="info-tag">
           <i className="bi bi-people me-2"></i>
           {currentStep.role}
@@ -74,15 +85,17 @@ const StepDetailsPanel = ({
             <i className="bi bi-rocket me-2"></i>
             Phase Progress
           </span>
+
           <span className="progress-count">
             Step {activeStep + 1} of {filteredSteps.length}
           </span>
         </div>
+
         <div className="progress">
           <motion.div 
-            className="progress-bar" 
+            className="progress-bar"
             initial={{ width: 0 }}
-            animate={{ width: `${((activeStep + 1) / filteredSteps.length) * 100}%` }}
+            animate={{ width: `${progressPercentage}%` }}
             transition={{ duration: 0.5 }}
           />
         </div>

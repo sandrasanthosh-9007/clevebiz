@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 
 const JourneyStepsPanel = ({
@@ -15,33 +14,39 @@ const JourneyStepsPanel = ({
         {phases[activePhase].name} Steps
       </h4>
 
-      {filteredSteps.map((step, index) => (
-        <motion.div
-          key={index}
-          className={`step-item ${activeStep === index ? "active" : ""}`}
-          onClick={() => onStepClick(index)}
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: index * 0.1 }}
-        >
-          <div className="step-icon-wrapper">
-            <i className={`bi bi-${step.icon}`}></i>
-          </div>
-          <div className="flex-grow-1">
-            <h6 className="step-title">{step.title}</h6>
-            <p className="step-preview">
-              {step.description.substring(0, 35)}...
-            </p>
-          </div>
+      {filteredSteps.map((step, index) => {
+        // Compute preview outside JSX for readability
+        const preview = step.description.slice(0, 35);
 
-          {activeStep === index && (
-            <motion.div
-              className="step-active-indicator"
-              layoutId="activeIndicator"
-            />
-          )}
-        </motion.div>
-      ))}
+        return (
+          <motion.div
+            key={step.title} // Use stable identifier
+            className={`step-item ${activeStep === index ? "active" : ""}`}
+            onClick={() => onStepClick(index)}
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: index * 0.1 }}
+          >
+            <div className="step-icon-wrapper">
+              <i className={`bi bi-${step.icon}`}></i>
+            </div>
+
+            <div className="flex-grow-1">
+              <h6 className="step-title">{step.title}</h6>
+              <p className="step-preview">
+                {preview}...
+              </p>
+            </div>
+
+            {activeStep === index && (
+              <motion.div
+                className="step-active-indicator"
+                layoutId="activeIndicator"
+              />
+            )}
+          </motion.div>
+        );
+      })}
     </div>
   );
 };
