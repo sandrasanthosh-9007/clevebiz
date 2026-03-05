@@ -96,7 +96,7 @@
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
-  background: #FFFFFF;
+  background: var( --white--color);
   border: 1px solid #E6EAF2;
 }
 
@@ -148,7 +148,7 @@
 /* Quick Stats */
 .quick-stats {
   padding: 1rem;
-  background: #FFFFFF;
+  background: var( --white--color);
   border-radius: 0.5rem;
   border: 1px solid #E6EAF2;
 }
@@ -216,7 +216,7 @@
 
 .step-badge {
   background: var(--primary-color);
-  color: #FFFFFF;
+  color: var( --white--color);
   padding: 0.25rem 0.75rem;
   border-radius: 20px;
   font-size: 0.75rem;
@@ -253,7 +253,7 @@
 }
 
 .info-tag {
-  background: #FFFFFF;
+  background: var( --white--color);
   padding: 0.4rem 1rem;
   border-radius: 30px;
   font-size: 0.9rem;
@@ -274,7 +274,7 @@
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  background: #FFFFFF;
+  background: var( --white--color);
   transition: all 0.3s ease;
   border: 1px solid #E6EAF2;
 }
@@ -298,7 +298,7 @@
 
 /* Progress Bar */
 .progress-container {
-  background: #FFFFFF;
+  background: var( --white--color);
   padding: 1rem;
   border-radius: 0.5rem;
   border: 1px solid #E6EAF2;
@@ -339,7 +339,7 @@
 
 /* Quick Action Cards */
 .quick-action-card {
-  background: #FFFFFF;
+  background: var( --white--color);
   padding: 1rem;
   border-radius: 0.5rem;
   text-align: center;
@@ -376,7 +376,7 @@
 
 /* Pro Tips */
 .pro-tips {
-  background: #FFFFFF;
+  background: var( --white--color);
   padding: 1rem;
   border-radius: 0.5rem;
   margin-top: 1rem;

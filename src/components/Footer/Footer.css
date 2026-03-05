@@ -47,7 +47,7 @@
 .social-link {
   width: 36px;
   height: 36px;
-  background: #ffffff;
+  background: var( --white--color);
   border: 1px solid #E6EAF2;
   border-radius: 50%;
   color: #6f7b92;
@@ -58,7 +58,7 @@
 .social-link:hover {
   background: var(--primary-color);
   border-color: var(--primary-color);
-  color: #ffffff;
+  color: var( --white--color);
   transform: translateY(-3px);
 }
 
@@ -160,7 +160,7 @@
   bottom: 30px;
   right: 30px;
   background: var(--primary-color);
-  color: #ffffff;
+  color: var( --white--color);
   padding: 0.75rem 1.5rem;
   border-radius: 50px;
   display: flex;
@@ -186,7 +186,7 @@
   border: none;
   border-radius: 24px;
   overflow: hidden;
-  background: #ffffff;
+  background: var( --white--color);
   padding: 0.5rem;
 }
 
@@ -240,7 +240,7 @@ textarea.query-input {
 
 .btn-primary-custom {
   background-color: var(--primary-color);
-  color: #ffffff;
+  color: var( --white--color);
   border: none;
   border-radius: 12px;
   transition: all 0.3s ease;

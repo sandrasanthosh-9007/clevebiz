@@ -1,5 +1,5 @@
 .strengths-section {
-  background: #FFFFFF;
+  background: var( --white--color);
   min-height: 100vh;
 }
 
@@ -64,7 +64,7 @@
 }
 
 .strength-card:hover .strength-icon {
-  color: #FFFFFF;
+  color: var( --white--color);
 }
 
 /* Card Shine Effect */

@@ -69,7 +69,7 @@
 
 
 .stat-item {
-  background-color: #ffffff;
+  background-color: var( --white--color);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   border: 1px solid #e6eaf2;
   border-radius: 12px;
@@ -101,7 +101,7 @@
   overflow: hidden;
   background-color: #ed9b52;
   border-radius: 10px;
-  color: #ffffff;
+  color: var( --white--color);
   white-space: nowrap;
 }
 
@@ -126,7 +126,7 @@
 
 
 .floating-card {
-  background-color: #ffffff;
+  background-color: var( --white--color);
   box-shadow: 0 10px 25px rgba(42, 78, 250, 0.08);
   border: 1px solid #e6eaf2;
   min-width: 200px;

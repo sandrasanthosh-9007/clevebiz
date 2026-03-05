@@ -5,7 +5,7 @@
 }
 
 .features-section {
-  background: linear-gradient(135deg, #ffffff 0%, #f8faff 100%);
+  background: linear-gradient(135deg, var( --white--color) 0%, #f8faff 100%);
   position: relative;
   overflow: hidden;
   padding: 5rem 0;
@@ -33,7 +33,7 @@
 }
 
 .feature-card {
-  background: #ffffff;
+  background: var( --white--color);
   border-radius: 24px;
   transition: all 0.3s ease;
   cursor: pointer;
@@ -92,7 +92,7 @@
 }
 
 .feature-card:hover .feature-icon {
-  color: #ffffff;
+  color: var( --white--color);
 }
 
 .highlight-badge {
@@ -106,12 +106,12 @@
 
 .feature-card:hover .highlight-badge {
   background: var(--primary-color);
-  color: #ffffff;
+  color: var( --white--color);
   border-color: var(--primary-color);
 }
 
 .integration-badge {
-  background: #ffffff;
+  background: var( --white--color);
   border: 1px solid #e6eaf2;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.02);
   display: inline-flex;
@@ -123,7 +123,7 @@
 
 .btn-primary-custom {
   background-color: var(--primary-color);
-  color: #ffffff;
+  color: var( --white--color);
   border: none;
   transition: all 0.3s ease;
   font-size: 1rem;
